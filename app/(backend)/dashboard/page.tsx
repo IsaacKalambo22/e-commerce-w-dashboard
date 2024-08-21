@@ -1,4 +1,5 @@
 // This is the dashboard page where cards, charts are displayed
+import CustomDataTable from '@/components/backend/CustomDataTable'
 import DarshboardCharts from '@/components/backend/DarshboardCharts'
 import Heading from '@/components/backend/Heading'
 import LargeCards from '@/components/backend/LargeCards'
@@ -17,6 +18,7 @@ export default function Dashboard() {
       {/* Charts */}
       <DarshboardCharts/>
       {/* Recent Orders Table */}
+      <CustomDataTable/>
     </div>
   )
 }
