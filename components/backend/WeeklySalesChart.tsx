@@ -83,9 +83,9 @@ export default function WeeklySalesChart() {
 
   return (
 
-    <div className="bg-slate-700 p-4 rounded-lg">
-        <h2 className="text-xl font-bold mb-4">
-        Weekly Sales Chart
+    <div className="dark:bg-slate-700 bg-slate-50 p-4 rounded-lg shadow-xl">
+        <h2 className="text-xl font-bold mb-4 text-slate-800 dark:text-slate-50">
+        Weekly Sales
         </h2>
         {/* Table */} 
      
@@ -96,7 +96,7 @@ export default function WeeklySalesChart() {
                 <li className="me-2" key={i} >
                     <button  onClick={() =>setChartToDisplay(tab.type)} 
                     className={ chartToDispaly== tab.type ?  "nline-flex items-center justify-center p-4 text-orange-500 border-b-2 border-orange-500    rounded-t-lg active dark:text-orange-500 dark:border-orange-500 group" 
-                    : "inline-block p-4 border-b-2 border-transparent rounded-t-lg text-gray-300 hover:text-gray-50 dark:border-gray-100 dark:hover:text-gray-300" }>  
+                    : "inline-block p-4 border-b-2 border-transparent rounded-t-lg text-slate-800 hover:text-gray-700 dark:border-gray-100 dark:hover:text-gray-300" }>  
                         {tab.title}                
                         </button>
                 </li>

@@ -18,10 +18,10 @@ export default function CustomDataTable() {
     const itemEndIndex = Math.min(startIndex + PAGE_SIZE, data.length);
     
   return (
-    <div className='p-1'>
-        <h2 className='text-xl font-bold m-4'>Recent Orders</h2>
+    <div className='mt-8'>
+        <h2 className='text-xl font-bold mb-4 text-slate-800 dark:text-slate-50 px-4'>Recent Orders</h2>
         {/* Table */}
-        <div className='p-2'>
+        <div className='p-8'>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -86,9 +86,9 @@ export default function CustomDataTable() {
     </table>
     {/* showing total number of pages and the current pages  */}
     <nav className="flex items-center flex-column flex-wrap md:flex-row justify-between p-4" aria-label="Table  navigation">
-        <span className="text-xl font-normal text-gray-400 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto">
+        <span className="text-xl font-normal text-gray-600 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto">
             Showing {''} 
-            <span className="font-semibold text-gray-50 dark:text-white">{itemStartIndex}-{itemEndIndex}</span> of <span className="font-semibold text-gray-50 dark:text-white">{data.length}</span></span>
+            <span className="font-semibold text-gray-800 dark:text-white">{itemStartIndex}-{itemEndIndex}</span> of <span className="font-semibold text-gray-800 dark:text-white">{data.length}</span></span>
         <ul className="inline-flex -space-x-px rtl:space-x-reverse text-sm h-14">
             {/* previous page button */}
             <li>
@@ -107,7 +107,7 @@ export default function CustomDataTable() {
                                 <button 
                                 onClick={()=> setCurrentPage(index+1)}
                                 disabled={currentPage==index+1}
-                                className={currentPage==index+1?"flex items-center justify-center px-3 h-10 leading-tight text-gray-50 bg-blue-600 border border-blue-300 hover:bg-blue-800 hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white": "flex items-center justify-center px-3 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"}>
+                                className={currentPage==index+1?"flex items-center justify-center px-3 h-10 leading-tight text-gray-50 bg-blue-600 border border-blue-300 hover:bg-blue-600 hover:text-white dark:bg-slate-100 dark:border-slate-200 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white": "flex items-center justify-center px-3 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"}>
                                   {index+1}
                                 </button>
                             </li>
