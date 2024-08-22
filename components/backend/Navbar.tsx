@@ -1,5 +1,5 @@
 
-import { AlignJustify, Bell, LayoutDashboard, LogOut, Settings, X } from 'lucide-react'
+import { AlignJustify, Bell, LayoutDashboard, Link, LogOut, Settings, X } from 'lucide-react'
 import Image from 'next/image';
 import {
   DropdownMenu,
@@ -12,12 +12,15 @@ import {
 import ThemeSwitcherBtn from './ThemeSwitcher';
 
 
-export default function Navbar() {
+export default function Navbar({showSidebar,setShowSideBar}: any) {
   return (
-    <div className=' flex items-center justify-between bg-white dark:bg-slate-800 text-slate-50 h-20 px-8 py-8 fixed top-0 w-full left-64 z-50 pr-[20rem]'>
+    <div className=' flex items-center justify-between bg-white dark:bg-slate-800 text-slate-50 h-20 px-8 py-8 fixed top-0 w-full left-64 z-50 sm:pr-[20rem]'>
+      <Link href={"/dashboard"} className='sm:hidden'>
+      Logo 
+      </Link>
       
         {/* Icon */}
-        <button className='text-lime-700 dark:text-lime-400'>
+        <button onClick={()=> setShowSideBar(!showSidebar)} className='text-lime-700 dark:text-lime-400'>
         
             <AlignJustify/>
         </button>
@@ -109,9 +112,9 @@ export default function Navbar() {
               <DropdownMenuTrigger asChild>             
                   <Image 
                 src='/isaac.png' 
-                width={200} 
-                height={200} 
-                className='w-10 rounded-full'  alt='User profile'/>               
+                width={100} 
+                height={100} 
+                className='w-9 h-9 py-18 rounded-full'  alt='User profile'/>               
               </DropdownMenuTrigger >
               <DropdownMenuContent>
                 <DropdownMenuLabel className='px-4 py-2 pr-8 '>My Account</DropdownMenuLabel>
