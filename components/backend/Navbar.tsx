@@ -1,6 +1,7 @@
 
-import { AlignJustify, Bell, LayoutDashboard, Link, LogOut, Settings, X } from 'lucide-react'
+import { AlignJustify, Bell, LayoutDashboard, LogOut, Settings, X } from 'lucide-react'
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,10 +15,10 @@ import ThemeSwitcherBtn from './ThemeSwitcher';
 
 export default function Navbar({showSidebar,setShowSideBar}: any) {
   return (
-    <div className=' flex items-center justify-between bg-white dark:bg-slate-800 text-slate-50 h-20 px-8 py-8 fixed top-0 w-full left-64 z-50 sm:pr-[20rem]'>
-      <Link href={"/dashboard"} className='sm:hidden'>
+    <div className=' flex items-center justify-between bg-white dark:bg-slate-800 text-slate-50 w-full h-20 px-8 py-8 fixed top-0 left-64 z-50 pr-[20rem]'>
+      {/* <Link href={"/dashboard"} className='sm:hidden'>
       Logo 
-      </Link>
+      </Link> */}
       
         {/* Icon */}
         <button onClick={()=> setShowSideBar(!showSidebar)} className='text-lime-700 dark:text-lime-400'>

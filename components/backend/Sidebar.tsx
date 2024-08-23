@@ -28,7 +28,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import { useState } from 'react'
-import { tr } from '@faker-js/faker'
+
 
 export default function Sidebar({showSidebar, setShowSideBar}: any) {
   const pathname = usePathname();
@@ -104,13 +104,15 @@ export default function Sidebar({showSidebar, setShowSideBar}: any) {
   return (
     <div className={
       showSidebar
-      ?'sm:block mt-20 sm:mt-0 dark:bg-slate-700 bg-white space-y-6 h-screen dark:text-slate-50 text-slate-800 px-4 py-4 left-0 fixed top-0 shadow-sm' 
-      : 'hidden mt-20 sm:mt-0 sm:block dark:bg-slate-700 bg-white space-y-6 h-screen dark:text-slate-50 text-slate-800 px-4 py-4 left-0 fixed top-0 shadow-sm'}>
+      ?'sm:block mt-20 sm:mt-4  dark:bg-slate-700 bg-white space-y-6 w-64 h-screen dark:text-slate-300 text-slate-800 left-0 fixed top-0 shadow-md overflow-scroll' 
+      : 'hidden mt-20 sm:mt-0 sm:block dark:bg-slate-700 bg-white space-y-6 w-64 h-screen dark:text-slate-300 text-slate-800 left-0 fixed top-0 shadow-md overflow-scroll'
+      }
+    >
       <Link 
         onClick={()=> setShowSideBar(false)}
         href='/dashboard'>
-        <Image src={Logo} alt='isaac logo' width={50} height={50} className='rounded-full'/>
-      </Link>
+        <Image src={Logo} alt='isaac logo' className='px-6 py-4 rounded-full w-36'/>
+      </Link> 
       
       <div className="space-y-3 flex flex-col mt-2">
         <Link 
